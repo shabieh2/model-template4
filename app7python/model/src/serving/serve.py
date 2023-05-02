@@ -23,15 +23,15 @@ import pickle
 
 app = Flask(__name__)
 #app.config['CORS_HEADERS'] = 'Content-Type'
-#mlflow.set_tracking_uri('http://ml.mlplatform.click/mlflow')
+mlflow.set_tracking_uri('http://ml.mlplatform.click/mlflow')
 #mlflow_run_id= "138b86e098ce4195bc4a5e65c1aba148"
 #mlflow_run_id="1995425c722e432384a5fb90a8f5e0af"
 
-mlflow.set_tracking_uri("http://18.236.226.221:5000")
-logged_model = 'runs:/01e3c544c88548a68ad58b6ebe5e6cbb/models'
+#mlflow.set_tracking_uri("http://18.236.226.221:5000")
+#logged_model = 'runs:/{os.environ["MLFLOW_RUN_ID"]}models'
 
 # Load model as a PyFuncModel.
-loaded_model = mlflow.pyfunc.load_model(logged_model)
+loaded_model = mlflow.pyfunc.load_model(f'runs:/{os.environ["MLFLOW_RUN_ID"]}/models')
 
 #
 #bucket = "mlflow-bucket-61dbad0"
