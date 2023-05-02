@@ -12,7 +12,7 @@ const config = new pulumi.Config();
 const baseStack = new pulumi.StackReference("shabieh2/ml-infra/mlplatform")
 
 
-const repo = new aws.ecr.Repository("myrepo2");
+const repo = new aws.ecr.Repository("myrepo3");
 
 
 const imageName = repo.repositoryUrl;
@@ -93,7 +93,7 @@ const service = deployment.createService();
 
 // Expose model in Traefik 
 new TraefikRoute('mlplatform2', {
-  prefix: '/lens-power-model',
+  prefix: '/lens-tf-model',
   service:service,
   namespace: 'default',
 }, { provider: provider, dependsOn: [service]});

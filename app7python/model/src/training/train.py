@@ -21,8 +21,8 @@ import os
 
 
 
-#mlflow.set_tracking_uri('http://ml.mlplatform.click/mlflow')
-mlflow.set_tracking_uri("http://18.236.226.221:5000")
+mlflow.set_tracking_uri('http://ml.mlplatform.click/mlflow')
+#mlflow.set_tracking_uri("http://18.236.226.221:5000")
 mlflow.set_experiment('Lens Tensorflow Model')
 mlflow.keras.autolog()
 
