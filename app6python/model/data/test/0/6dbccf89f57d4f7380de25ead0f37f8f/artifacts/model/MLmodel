@@ -1,0 +1,24 @@
+artifact_path: model
+flavors:
+  lightgbm:
+    code: null
+    data: model.lgb
+    lgb_version: 3.3.5
+    model_class: lightgbm.basic.Booster
+  python_function:
+    data: model.lgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.10.0
+mlflow_version: 2.1.1
+model_uuid: 0713a4ebd7514f43877599fb5c5a71a8
+run_id: 6dbccf89f57d4f7380de25ead0f37f8f
+signature:
+  inputs: '[{"name": "sepal.length", "type": "double"}, {"name": "sepal.width", "type":
+    "double"}, {"name": "petal.length", "type": "double"}, {"name": "petal.width",
+    "type": "double"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1,
+    3]}}]'
+utc_time_created: '2023-03-14 20:00:11.566706'

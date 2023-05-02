@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+  <meta charset="UTF-8">
+  <title>Lens Power Data Set</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<link rel="stylesheet" type="text/css" href='static/css/style.css'>
+  
+</head>
+
+
+<body style="background: #000;">
+ <div class="login">
+	<h1><h1 style="color:white;">Lens Type Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML Model -->
+        <form action="/mlplatform/predict" method="post">
+	    <!--<input type="text" name="Cylinders" placeholder="Sepal Length" required="required" />-->
+        <input type="text" name="Sepal Length" placeholder="Axial Length" required="required" />
+  <br><br>
+
+        <input type="text" name="Sepal Width" placeholder="WTW" required="required" />
+	<!-- <input type="text" name="Hybrid" placeholder="Is Hybrid?" required="required" /> -->
+    <br><br>
+    <input type="text" name="Petal Length" placeholder="K Flat" required="required" />
+  <br><br>
+  <input type="text" name="Petal Width" placeholder="K Steep" required="required" />
+  
+
+
+       <br> <br> <button type="submit" class="btn btn-primary btn-block btn-large">Predict Lens Type</button>
+    </form>
+
+   <br>
+   
+       {{ prediction_text }}
+
+</div>
+</body>
+</html>
