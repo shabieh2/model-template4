@@ -6,7 +6,7 @@ import * as kx from '@pulumi/kubernetesx';
 import TraefikRoute from './TraefikRoute';
 import * as docker from "@pulumi/docker";
 
-
+//
 
 const config = new pulumi.Config();
 const baseStack = new pulumi.StackReference("shabieh2/ml-infra/dev")
