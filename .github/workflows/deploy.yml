@@ -1,6 +1,6 @@
 name: Deploy
 on:
-  request pull:
+  push:
     branches:
       - main
 jobs:
@@ -33,7 +33,7 @@ jobs:
           run: make install-deps
         
    
-        - name: Train
-          run: make train
+        - name: Deploy
+          run: make deploy
           env:
             PULUMI_ACCESS_TOKEN: ${{secrets.PULUMI_ACCESS_TOKEN}}
