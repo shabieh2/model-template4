@@ -9,7 +9,7 @@ import * as docker from "@pulumi/docker";
 
 
 const config = new pulumi.Config();
-const baseStack = new pulumi.StackReference("shabieh2/ml-infra/mlplatform")
+const baseStack = new pulumi.StackReference("shabieh2/ml-infra/dev")
 
 
 const repo = new aws.ecr.Repository("myrepo3");
