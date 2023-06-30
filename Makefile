@@ -1,7 +1,7 @@
 
 SHELL := /bin/bash
 
-STACK_NAME=dev4
+STACK_NAME=dev5
 BASE_STACK_NAME=ml-infra/mlplatform
 PULUMI_CMD=pulumi --non-interactive --cwd infra/
 
